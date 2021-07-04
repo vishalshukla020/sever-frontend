@@ -20,15 +20,23 @@ export default function AdminTable() {
   }, []);
 
   return (
-    <div>
-      {data ? data.map((item) => <Table data={item} />) : ""}
+    <div className="wrapper">
+      {data
+        ? data.map((item) => (
+            <div className="inner">
+              <Table data={item} />
+            </div>
+          ))
+        : ""}
       <style jsx>{`
-        div {
-          max-width: 400px;
+        .wrapper {
+          max-width: 450px;
           box-shadow: 0 0.5rem 1rem rgba(51, 4, 4, 0.1),
             0 1rem 3rem rgba(0, 0, 0, 0.1);
           background: #ffffff;
           padding: 1em 1em;
+        }
+        .inner {
           margin: 1em 0;
         }
       `}</style>
@@ -49,7 +57,7 @@ const Table = ({ data }) => {
       ))}
       <style jsx>{`
         .box {
-          margin: 1em 0;
+          padding: 1em 0;
         }
         .row {
           display: flex;
