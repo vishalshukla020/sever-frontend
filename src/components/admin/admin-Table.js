@@ -40,7 +40,7 @@ const Table = ({ data }) => {
   const keys = Object.keys(data);
   console.log(data, keys);
   return (
-    <div>
+    <div className="box">
       {keys.map((key) => (
         <div className="row">
           <div className="key"> {key}</div>:
@@ -48,7 +48,7 @@ const Table = ({ data }) => {
         </div>
       ))}
       <style jsx>{`
-        div {
+        .box {
           margin: 1em 0;
         }
         .row {
