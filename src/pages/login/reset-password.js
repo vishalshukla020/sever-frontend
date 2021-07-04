@@ -12,10 +12,10 @@ export default function Home() {
   const context = useContext(AuthContext);
 
   const [registerData, setRegisterData] = useState({
-    id: context.user._id,
-    username: context.user.username,
+    id: context.user ? context.user._id : "",
+    username: context.user ? context.user.username : "",
     password: "",
-    phone: context.user.phone,
+    phone: context.user ? context.user.phone : "",
     confirmPassword: "",
   });
 
