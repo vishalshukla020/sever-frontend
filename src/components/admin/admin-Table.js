@@ -29,14 +29,12 @@ export default function AdminTable() {
           ))
         : ""}
       <style jsx>{`
-        .wrapper {
+        .inner {
           max-width: 450px;
           box-shadow: 0 0.5rem 1rem rgba(51, 4, 4, 0.1),
             0 1rem 3rem rgba(0, 0, 0, 0.1);
           background: #ffffff;
           padding: 1em 1em;
-        }
-        .inner {
           margin: 1em 0;
         }
       `}</style>
