@@ -29,6 +29,7 @@ export default function AdminTable() {
             0 1rem 3rem rgba(0, 0, 0, 0.1);
           background: #ffffff;
           padding: 1em 1em;
+          margin: 1em 0;
         }
       `}</style>
     </div>
@@ -47,9 +48,15 @@ const Table = ({ data }) => {
         </div>
       ))}
       <style jsx>{`
+        div {
+          margin: 1em 0;
+        }
         .row {
           display: flex;
           margin: 0.5em 0;
+        }
+        .row:nth-child(odd) {
+          background: rgba(245, 245, 245);
         }
         .key {
           flex: 1;
