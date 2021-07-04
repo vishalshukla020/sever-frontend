@@ -24,7 +24,9 @@ export default function Home() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:4000/posts/create", { ...formData })
+      .post("https://mysterious-bastion-09867.herokuapp.com/posts/create", {
+        ...formData,
+      })
       .then((res) => {
         console.log(res);
       })
